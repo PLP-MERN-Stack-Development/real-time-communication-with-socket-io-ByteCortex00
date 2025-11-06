@@ -1,0 +1,427 @@
+/* client/src/App.css - ENHANCED FOR CLERK COMPONENTS */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Auth Container Styles */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.auth-content {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-header h1 {
+  margin: 0 0 12px 0;
+  color: #1a1a1a;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.auth-tabs {
+  width: 100%;
+}
+
+/* Clerk Component Overrides - FIXED ALIGNMENT */
+.cl-rootBox {
+  width: 100% !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.cl-card {
+  width: 100% !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.cl-header {
+  text-align: center !important;
+  margin-bottom: 24px !important;
+  padding: 0 !important;
+}
+
+.cl-headerTitle {
+  font-size: 24px !important;
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 8px !important;
+}
+
+.cl-headerSubtitle {
+  color: #666 !important;
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  opacity: 0.8 !important;
+}
+
+.cl-formField {
+  margin-bottom: 20px !important;
+}
+
+.cl-formFieldLabel {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  font-size: 14px !important;
+}
+
+.cl-formFieldInput {
+  border: 2px solid #e1e5e9 !important;
+  border-radius: 12px !important;
+  padding: 14px 16px !important;
+  font-size: 16px !important;
+  transition: all 0.2s ease !important;
+  background: #fff !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.cl-formFieldInput:focus {
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+  outline: none !important;
+}
+
+.cl-formFieldInput:hover {
+  border-color: #c5cad0 !important;
+}
+
+.cl-formButtonPrimary {
+  background: #007bff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 20px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  margin-top: 8px !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.cl-formButtonPrimary:hover {
+  background: #0056b3 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3) !important;
+}
+
+.cl-formButtonPrimary:active {
+  transform: translateY(0) !important;
+}
+
+.cl-formButtonPrimary:disabled {
+  background: #6c757d !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.cl-footerAction {
+  margin-top: 24px !important;
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+.cl-footerActionLink {
+  color: #007bff !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: color 0.2s ease !important;
+}
+
+.cl-footerActionLink:hover {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+
+.cl-alert {
+  border-radius: 12px !important;
+  margin-bottom: 20px !important;
+  border: 1px solid !important;
+}
+
+.cl-alertIcon {
+  margin-right: 12px !important;
+}
+
+.cl-dividerLine {
+  background: #e1e5e9 !important;
+  margin: 28px 0 !important;
+  height: 1px !important;
+}
+
+.cl-dividerText {
+  color: #666 !important;
+  background: white !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Social Buttons */
+.cl-socialButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cl-socialButtonsBlockButton {
+  border: 2px solid #e1e5e9 !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  background: white !important;
+  color: #1a1a1a !important;
+  transition: all 0.2s ease !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+}
+
+.cl-socialButtonsBlockButton:hover {
+  background: #f8f9fa !important;
+  border-color: #007bff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.cl-socialButtonsProviderIcon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* App Header Styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f8f9fa;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+
+.header-left h1 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-subtitle {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+  opacity: 0.8;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-welcome {
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Clerk UserButton customization */
+.cl-userButtonBox {
+  display: block !important;
+}
+
+.cl-userButtonTrigger {
+  border: 2px solid #e1e5e9 !important;
+  border-radius: 12px !important;
+  padding: 4px !important;
+  transition: all 0.2s ease !important;
+}
+
+.cl-userButtonTrigger:hover {
+  background-color: #f8f9fa !important;
+  border-color: #007bff !important;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 16px;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  
+  .auth-content {
+    padding: 24px;
+    margin: 0;
+    border-radius: 12px;
+  }
+  
+  .auth-header h1 {
+    font-size: 24px;
+  }
+  
+  .auth-header p {
+    font-size: 14px;
+  }
+  
+  .app-header {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .header-left h1 {
+    font-size: 20px;
+  }
+  
+  .user-welcome {
+    display: none;
+  }
+  
+  .cl-headerTitle {
+    font-size: 22px !important;
+  }
+  
+  .cl-headerSubtitle {
+    font-size: 14px !important;
+  }
+  
+  .cl-formFieldInput {
+    padding: 12px 14px !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+  
+  .cl-formButtonPrimary {
+    padding: 12px 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-content {
+    padding: 20px;
+  }
+  
+  .auth-header {
+    margin-bottom: 20px;
+  }
+  
+  .auth-header h1 {
+    font-size: 22px;
+  }
+  
+  .cl-headerTitle {
+    font-size: 20px !important;
+  }
+}
+
+/* Loading states */
+.cl-internal-1dauvpw {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ensure proper spacing in form fields */
+.cl-formFieldInputContainer {
+  width: 100% !important;
+}
+
+/* Fix any overflow issues */
+.cl-card * {
+  box-sizing: border-box !important;
+}
+
+/* Error state styling */
+.cl-formFieldError {
+  color: #dc3545 !important;
+  font-size: 14px !important;
+  margin-top: 8px !important;
+  font-weight: 500 !important;
+}
+
+/* Success state styling */
+.cl-alertSuccess {
+  border-color: #28a745 !important;
+  background: #d4edda !important;
+  color: #155724 !important;
+}
